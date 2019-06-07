@@ -41,22 +41,69 @@ class Header extends React.Component{
     {
         return <Redirect push to="/brand"/>;
     }
+    reachCountToObject(reach)
+    {
+        var returnObject = {};
+        reach = parseInt(reach);
+        returnObject['count'] = reach;
+        returnObject['unit'] = '';
+        if(reach < 1000)
+        {
+            return returnObject;
+        }
+        else if (reach < 1000000)
+        {
+            returnObject['count'] = parseFloat(reach/1000).toFixed(0);
+            returnObject['unit'] = 'k';
+        }
+        else if (reach < 1000000000)
+        {
+            returnObject['count'] = parseFloat(reach/1000000).toFixed(0);
+            returnObject['unit'] = 'm';
+        }
+        else if (reach < 1000000000000)
+        {
+            returnObject['count'] = parseFloat(reach/1000000000).toFixed(0);
+            returnObject['unit'] = 'b';
+        }
+        return returnObject;
+    }
+
+    getCategories(userDetails)
+    {
+        let categories = this.safeReturn(userDetails,'categories',[]);
+        let categoryXml = [];
+        for(let i in categories)
+        {
+            console.log("categories",categories[i]);
+            let category = this.safeReturn(categories[i],'name','');
+            categoryXml.push(<span key ={i}>{category}</span>)
+        }
+        return categoryXml;
+    }
     render(){
 
        let userDetails = this.userDetails();
         console.log("userDetails",userDetails);
+        let imageUrl = this.safeReturn(userDetails,'imageUrl','');
+        let name = this.safeReturn(userDetails,'name','');
+        let profession = this.safeReturn(userDetails,'profession','');
+        let price = this.reachCountToObject(this.safeReturn(userDetails,'price',0));
+        let bio = this.safeReturn(userDetails,'bio','');
+        let categoryXml = this.getCategories(userDetails);
+        price = price['count'] + price['unit'];
         return(
             <div className="celeb--detail-wrapper">
                 <div className="celeb-picture">
-                    <img src="https://d31wcbk3iidrjq.cloudfront.net/IpPYvx1-B-03C8FDD3-1ED2-46E5-8329-674790F34EAB.png" className="img-responsive" />
+                    <img src={imageUrl} className="img-responsive" />
                 </div>
                 <div className="celeb-detail">
                     <div className="personal--detail">
-                        <h2>Paul Ben-Victor</h2>
-                        <h3>Actor - The Wire</h3>
-                        <p className="celeb--decs">You might know me from The Wire, Entourage, Everybody Hates Chris, The 3 Stooges and more</p>
+                        <h2>{name}</h2>
+                        <h3>{profession}</h3>
+                        <p className="celeb--decs">{bio}</p>
                         <p className="celeb--form">
-                            <span>Book Paul Ben-Victor for $60</span>
+                            <span>Book {name} for {price}</span>
                         </p>
                     </div>
                     <div className="celeb-review">
@@ -77,12 +124,7 @@ class Header extends React.Component{
                         </div>
                     </div>
                     <div className="celeb-batch">
-                        <span>Podcast</span>
-                        <span>Comedian</span>
-                        <span>Actors</span>
-                        <span>Disney</span>
-                        <span>TV</span>
-                        <span>Media</span>
+                        {categoryXml}
                     </div>
 
                 </div>

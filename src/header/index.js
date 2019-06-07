@@ -8,15 +8,6 @@ class Header extends React.Component{
     render(){
         return(
             <div>
-                <HashRouter>
-                        <Switch>
-                            <Route path="/dashboard/:id?" component={Profile}/>
-                            <Route path="/brand/" component={BrandCards}/>
-                            <Redirect to="/brand"/>
-
-                        </Switch>
-                </HashRouter>
-
                 <ul className="nav nav-tabs">
                     <li className="nav-item">
                         <a className="nav-link active" href="#">Search</a>
@@ -30,10 +21,9 @@ class Header extends React.Component{
                 </ul>
                 <HashRouter>
                         <Switch>
-                            <Route path="/dashboard/:activeTab?" component={Profile}/>
+                            <Route path="/dashboard/:id?" component={Profile}/>
                             <Route path="/brand/" component={BrandCards}/>
-                            {/*<Redirect to="/brand"/>*/}
-
+                            <Redirect to="/brand"/>
                         </Switch>
                 </HashRouter>
 
