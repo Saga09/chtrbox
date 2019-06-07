@@ -60,27 +60,37 @@ class Card extends React.Component{
     getCardDetail(){
         let cardXml = []
 
-        for(let i in cardDetail){
+        let userprofiles = Profiles.users;
+
+        for(let i in userprofiles){
+            let imageUrl = this.safeReturn(userprofiles[i],'imageUrl','');
+            let name = this.safeReturn(userprofiles[i],'name','');
+            let type = this.safeReturn(userprofiles[i],'profession','');
+            let price = this.safeReturn(userprofiles[i],'price','');
+            if(imageUrl == '')
+            {
+                continue;
+            }
             cardXml.push(
                 <div>
-                <div className="card-wrap col-md-4 col-sm-6 col-xs-12" key={cardDetail[i].name}>
+                <div className="card-wrap col-md-4 col-sm-6 col-xs-12" key={i}>
                     <article className="material-card Red">
                         <h2>
-                        <span>{cardDetail[i].name}</span>
+                        <span>{name}</span>
                         <strong>
                             <i class="fa fa-fw fa-star"></i>
-                            {cardDetail[i].type}
+                            {type}
                         </strong>
                     </h2>
                         <div className="mc-content">
                             <div className="img-container">
                                 <img className="img-responsive"
-                                     src={cardDetail[i].url} />
+                                     src={imageUrl} />
                             </div>
 
                         </div>
                         <a className="mc-btn-action">
-                            &#8377; 120
+                            &#8377; {price}
                         </a>
 
                     </article>
