@@ -66,8 +66,9 @@ class Card extends React.Component{
             {
                 continue;
             }
+            let navigateTo = '/dashboard/'+ i;
             cardXml.push(
-                <NavLink to={'/dashboard/'}>
+                <NavLink to={navigateTo}>
                 <div>
                 <div className="card-wrap col-md-4 col-sm-6 col-xs-12" key={i}>
                     <article className="material-card Red">
