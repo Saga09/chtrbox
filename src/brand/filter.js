@@ -29,6 +29,7 @@ class Filter extends React.Component{
     render(){
         return(
             <div id="left--filters">
+                <h3>Categories</h3>
                 {this.getFilterNames()}
             </div>
         )
