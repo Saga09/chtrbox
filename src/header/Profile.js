@@ -89,6 +89,10 @@ class Header extends React.Component{
         {
             averageRatingXml.push(<span key ={i} className="fa fa-star checked"></span>)
         }
+        for(let i=0 ; i < (5-averageRating); i++)
+        {
+            averageRatingXml.push(<span key ={i} className="fa fa-star checked"></span>)
+        }
         return averageRatingXml;
     }
     render(){
