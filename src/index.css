@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@font-face{font-family:'Roboto-Regular';src:url(../src/Assets/fonts/Roboto/old/Roboto-Regular.woff) format("woff"),url(../src/Assets/fonts/Roboto/old/Roboto-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'Roboto-Medium';src:url(../src/Assets/fonts/Roboto/old/Roboto-Medium.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'Roboto-Light';src:url(../src/Assets/fonts/Roboto/old/Roboto-Light.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'BebasNeue';src:url(../src/Assets/fonts/Bebas/BebasNeue.otf) format("truetype");font-weight:400;font-style:normal}
+
+@font-face {
+  font-family: 'gothambold';
+  src: url('../src/Assets/fonts/gotham/gothambold-webfont.woff2') format('woff2'),
+  url('../src/Assets/fonts/gotham/gothambold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'gothambook';
+  src: url('../src/Assets/fonts/gotham/gothambook-webfont.woff2') format('woff2'),
+  url('../src/Assets/fonts/gotham/gothambook-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  font-family: 'Roboto-Regular',sans-serif;
+}
+
+
+#cardWrapper {
+  padding: 30px 0 0 0;
+}
+
+#left--filters {
+  width: 150px;
+  float: left;
+}
+#left--filters .filters-wrap {
+
+}
+#left--filters .filters-wrap p {
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+  font-family: 'Roboto-Medium';
+  /* font-family: 'gothambold'; */
+  font-weight: normal;
+}
+#left--filters .filters-wrap p span {
+  float: right;
+}
+
+#right--card {
+  width: calc(100% - 150px);
+  float: left;
+  padding: 0 20px;
+}
+#right--card .card-wrap {
+
+}
+.card-wrap img {
+  width: 100%;
+}
+.card-wrap h3 {
+  font-family: 'BebasNeue';
+  font-size: 21px;
+  padding: 15px 0 0 0;
+}
+.card-wrap p {
+
+}
