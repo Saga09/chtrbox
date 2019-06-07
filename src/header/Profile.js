@@ -81,21 +81,35 @@ class Header extends React.Component{
         }
         return categoryXml;
     }
+    getAverageRating(userDetails)
+    {
+        let averageRating = this.safeReturn(userDetails,'averageRating',0);
+        let averageRatingXml = [];
+        for(let i=0 ; i < averageRating; i++)
+        {
+            averageRatingXml.push(<span key ={i} className="fa fa-star checked"></span>)
+        }
+        return averageRatingXml;
+    }
     render(){
 
        let userDetails = this.userDetails();
-        console.log("userDetails",userDetails);
         let imageUrl = this.safeReturn(userDetails,'imageUrl','');
         let name = this.safeReturn(userDetails,'name','');
         let profession = this.safeReturn(userDetails,'profession','');
         let price = this.reachCountToObject(this.safeReturn(userDetails,'price',0));
         let bio = this.safeReturn(userDetails,'bio','');
+
         let categoryXml = this.getCategories(userDetails);
+        let ratingXml = this.getAverageRating(userDetails);
+
         price = price['count'] + price['unit'];
         return(
             <div className="celeb--detail-wrapper">
                 <div className="col-md-4 col-sm-4 col-xs-12 celeb-picture">
                     <img src="https://d31wcbk3iidrjq.cloudfront.net/IpPYvx1-B-03C8FDD3-1ED2-46E5-8329-674790F34EAB.png" className="img-responsive" />
+                <div className="col-md-4 col-sm-4 col-xs-4 celeb-picture">
+                    <img src={imageUrl} className="img-responsive" />
                 </div>
                 <div className="col-md-8 col-sm-8 col-xs-12 celeb-detail">
                     <div className="personal--detail">
@@ -110,13 +124,8 @@ class Header extends React.Component{
                         <div className="col-sm-4">
                             <p>1 Review</p>
                             <div className="celeb-rating">
-                                <span className="fa fa-star checked"></span>
-                                <span className="fa fa-star checked"></span>
-                                <span className="fa fa-star checked"></span>
-                                <span className="fa fa-star"></span>
-                                <span className="fa fa-star"></span>
+                                {ratingXml}
                             </div>
-
                             {/*<p><span>See all reviews</span></p>*/}
                         </div>
                         <div className="col-sm-8">
