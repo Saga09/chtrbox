@@ -423,7 +423,8 @@ body {
 
 /*CSS For Celeb profile Page*/
 .celeb--detail-wrapper {
-
+  overflow: hidden;
+  padding: 50px 0 0 0;
 }
 .celeb-picture {
 
@@ -438,25 +439,71 @@ body {
 
 }
 .personal--detail h2 {
-
+  padding: 0;
+  margin: 0 0 0px 0;
+  font-family: BebasNeue;
+  font-size: 50px;
+  /* line-height: 46px; */
 }
 .personal--detail h3 {
-
+  margin: 0;
+  padding: 5px 0 15px 0;
 }
 .personal--detail p {
 
 }
 .personal--detail p.celeb--decs {
-
+  font-size: 19px;
+  font-family: 'Roboto-Light';
+  margin: 0;
 }
 .personal--detail p.celeb--form {
 
 }
 .personal--detail p.celeb--form span{
+  background-color: #e02645;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 30px 0;
+}
+.celeb-review {
 
 }
-
-
+.celeb-review .col-sm-4 {
+  border-right: 2px solid #ccc;
+}
+.celeb-review .col-sm-4 p {
+  font-family: 'gothambold';
+  /* font-weight: 700; */
+  font-size: 16px;
+}
+.celeb-review .col-sm-8 p {
+  font-size: 16px;
+}
+.celeb-rating span {
+  margin: 0 10px 0 0;
+  font-size: 19px;
+}
+.checked {
+  color: orange;
+}
+.celeb-batch {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  margin: 30px 0 0 0;
+}
+.celeb-batch span {
+  background-color: #ccc;
+  margin: 5px 5px;
+  padding: 4px 20px;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+  font-family: 'Roboto-Medium';
+}
 
 /*Media Query Start*/
 @media (min-width: 240px) and (max-width: 580px) {
@@ -482,4 +529,24 @@ body {
     #right--card {
         width: 100%;
     }
+    .personal--detail {
+      margin: 30px 0 0 0;
+    }
+  .personal--detail h2 {
+    font-size: 32px;
+  }
+  .personal--detail h3 {
+    font-size: 19px;
+  }
+  .celeb-rating {
+    padding: 0 0 20px 0;
+  }
+  .celeb-batch span {
+    padding: 3px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    font-family: 'Roboto-Medium';
+  }
+
+
 }
