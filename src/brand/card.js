@@ -1,4 +1,5 @@
 import React from 'react';
+import Profiles from '../profiles.json';
 
 import $ from 'jquery'
 
@@ -12,6 +13,20 @@ const cardDetail = [
 
 
 class Card extends React.Component{
+
+    safeReturn(object,index,defaultValue)
+    {
+        defaultValue = defaultValue == undefined ? false : defaultValue;
+        if(object == undefined || index == undefined)
+        {
+            return defaultValue;
+        }
+        if(object[index] == undefined || object[index] === '')
+        {
+            return defaultValue;
+        }
+        return object[index];
+    }
 
     componentDidMount(){
         // $('.material-card > .mc-btn-action').click(function () {
