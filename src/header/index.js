@@ -10,9 +10,9 @@ class Header extends React.Component{
             <div>
                 <HashRouter>
                         <Switch>
-                            <Route path="/dashboard/:activeTab?" component={Profile}/>
+                            <Route path="/dashboard/:id?" component={Profile}/>
                             <Route path="/brand/" component={BrandCards}/>
-                            {/*<Redirect to="/brand"/>*/}
+                            <Redirect to="/brand"/>
 
                         </Switch>
                 </HashRouter>
