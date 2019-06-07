@@ -421,6 +421,42 @@ body {
   background-color: #FFEBEE;
 }
 
+/*CSS For Celeb profile Page*/
+.celeb--detail-wrapper {
+
+}
+.celeb-picture {
+
+}
+.celeb-picture img {
+
+}
+.celeb-detail {
+
+}
+.personal--detail {
+
+}
+.personal--detail h2 {
+
+}
+.personal--detail h3 {
+
+}
+.personal--detail p {
+
+}
+.personal--detail p.celeb--decs {
+
+}
+.personal--detail p.celeb--form {
+
+}
+.personal--detail p.celeb--form span{
+
+}
+
+
 
 /*Media Query Start*/
 @media (min-width: 240px) and (max-width: 580px) {
