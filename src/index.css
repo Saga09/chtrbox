@@ -152,6 +152,9 @@ body {
   font-weight: 400;
   display: block;
   font-size: 0.8em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .material-card h2:before,
 .material-card h2:after {
@@ -417,265 +420,66 @@ body {
 .material-card.Red.mc-active .mc-content {
   background-color: #FFEBEE;
 }
-.material-card.Red.mc-active .mc-footer {
-  background-color: #FFCDD2;
+
+/*CSS For Celeb profile Page*/
+.celeb--detail-wrapper {
+
 }
-.material-card.Red.mc-active .mc-btn-action {
-  border-color: #FFEBEE;
+.celeb-picture {
+
 }
-.material-card.Blue-Grey h2 {
-  background-color: #607D8B;
+.celeb-picture img {
+
 }
-.material-card.Blue-Grey h2:after {
-  border-top-color: #607D8B;
-  border-right-color: #607D8B;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
+.celeb-detail {
+
 }
-.material-card.Blue-Grey h2:before {
-  border-top-color: transparent;
-  border-right-color: #263238;
-  border-bottom-color: #263238;
-  border-left-color: transparent;
+.personal--detail {
+
 }
-.material-card.Blue-Grey.mc-active h2:before {
-  border-top-color: transparent;
-  border-right-color: #607D8B;
-  border-bottom-color: #607D8B;
-  border-left-color: transparent;
+.personal--detail h2 {
+
 }
-.material-card.Blue-Grey.mc-active h2:after {
-  border-top-color: #263238;
-  border-right-color: #263238;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
+.personal--detail h3 {
+
 }
-.material-card.Blue-Grey .mc-btn-action {
-  background-color: #607D8B;
+.personal--detail p {
+
 }
-.material-card.Blue-Grey .mc-btn-action:hover {
-  background-color: #263238;
+.personal--detail p.celeb--decs {
+
 }
-.material-card.Blue-Grey .mc-footer h4 {
-  color: #263238;
+.personal--detail p.celeb--form {
+
 }
-.material-card.Blue-Grey .mc-footer a {
-  background-color: #263238;
-}
-.material-card.Blue-Grey.mc-active .mc-content {
-  background-color: #ECEFF1;
-}
-.material-card.Blue-Grey.mc-active .mc-footer {
-  background-color: #CFD8DC;
-}
-.material-card.Blue-Grey.mc-active .mc-btn-action {
-  border-color: #ECEFF1;
-}
-.material-card.Pink h2 {
-  background-color: #E91E63;
-}
-.material-card.Pink h2:after {
-  border-top-color: #E91E63;
-  border-right-color: #E91E63;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Pink h2:before {
-  border-top-color: transparent;
-  border-right-color: #880E4F;
-  border-bottom-color: #880E4F;
-  border-left-color: transparent;
-}
-.material-card.Pink.mc-active h2:before {
-  border-top-color: transparent;
-  border-right-color: #E91E63;
-  border-bottom-color: #E91E63;
-  border-left-color: transparent;
-}
-.material-card.Pink.mc-active h2:after {
-  border-top-color: #880E4F;
-  border-right-color: #880E4F;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Pink .mc-btn-action {
-  background-color: #E91E63;
-}
-.material-card.Pink .mc-btn-action:hover {
-  background-color: #880E4F;
-}
-.material-card.Pink .mc-footer h4 {
-  color: #880E4F;
-}
-.material-card.Pink .mc-footer a {
-  background-color: #880E4F;
-}
-.material-card.Pink.mc-active .mc-content {
-  background-color: #FCE4EC;
-}
-.material-card.Pink.mc-active .mc-footer {
-  background-color: #F8BBD0;
-}
-.material-card.Pink.mc-active .mc-btn-action {
-  border-color: #FCE4EC;
-}
-.material-card.Purple h2 {
-  background-color: #9C27B0;
-}
-.material-card.Purple h2:after {
-  border-top-color: #9C27B0;
-  border-right-color: #9C27B0;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Purple h2:before {
-  border-top-color: transparent;
-  border-right-color: #4A148C;
-  border-bottom-color: #4A148C;
-  border-left-color: transparent;
-}
-.material-card.Purple.mc-active h2:before {
-  border-top-color: transparent;
-  border-right-color: #9C27B0;
-  border-bottom-color: #9C27B0;
-  border-left-color: transparent;
-}
-.material-card.Purple.mc-active h2:after {
-  border-top-color: #4A148C;
-  border-right-color: #4A148C;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Purple .mc-btn-action {
-  background-color: #9C27B0;
-}
-.material-card.Purple .mc-btn-action:hover {
-  background-color: #4A148C;
-}
-.material-card.Purple .mc-footer h4 {
-  color: #4A148C;
-}
-.material-card.Purple .mc-footer a {
-  background-color: #4A148C;
-}
-.material-card.Purple.mc-active .mc-content {
-  background-color: #F3E5F5;
-}
-.material-card.Purple.mc-active .mc-footer {
-  background-color: #E1BEE7;
-}
-.material-card.Purple.mc-active .mc-btn-action {
-  border-color: #F3E5F5;
-}
-.material-card.Deep-Purple h2 {
-  background-color: #673AB7;
-}
-.material-card.Deep-Purple h2:after {
-  border-top-color: #673AB7;
-  border-right-color: #673AB7;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Deep-Purple h2:before {
-  border-top-color: transparent;
-  border-right-color: #311B92;
-  border-bottom-color: #311B92;
-  border-left-color: transparent;
-}
-.material-card.Deep-Purple.mc-active h2:before {
-  border-top-color: transparent;
-  border-right-color: #673AB7;
-  border-bottom-color: #673AB7;
-  border-left-color: transparent;
-}
-.material-card.Deep-Purple.mc-active h2:after {
-  border-top-color: #311B92;
-  border-right-color: #311B92;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Deep-Purple .mc-btn-action {
-  background-color: #673AB7;
-}
-.material-card.Deep-Purple .mc-btn-action:hover {
-  background-color: #311B92;
-}
-.material-card.Deep-Purple .mc-footer h4 {
-  color: #311B92;
-}
-.material-card.Deep-Purple .mc-footer a {
-  background-color: #311B92;
-}
-.material-card.Deep-Purple.mc-active .mc-content {
-  background-color: #EDE7F6;
-}
-.material-card.Deep-Purple.mc-active .mc-footer {
-  background-color: #D1C4E9;
-}
-.material-card.Deep-Purple.mc-active .mc-btn-action {
-  border-color: #EDE7F6;
-}
-.material-card.Indigo h2 {
-  background-color: #3F51B5;
-}
-.material-card.Indigo h2:after {
-  border-top-color: #3F51B5;
-  border-right-color: #3F51B5;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Indigo h2:before {
-  border-top-color: transparent;
-  border-right-color: #1A237E;
-  border-bottom-color: #1A237E;
-  border-left-color: transparent;
-}
-.material-card.Indigo.mc-active h2:before {
-  border-top-color: transparent;
-  border-right-color: #3F51B5;
-  border-bottom-color: #3F51B5;
-  border-left-color: transparent;
-}
-.material-card.Indigo.mc-active h2:after {
-  border-top-color: #1A237E;
-  border-right-color: #1A237E;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Indigo .mc-btn-action {
-  background-color: #3F51B5;
-}
-.material-card.Indigo .mc-btn-action:hover {
-  background-color: #1A237E;
-}
-.material-card.Indigo .mc-footer h4 {
-  color: #1A237E;
-}
-.material-card.Indigo .mc-footer a {
-  background-color: #1A237E;
-}
-.material-card.Indigo.mc-active .mc-content {
-  background-color: #E8EAF6;
-}
-.material-card.Indigo.mc-active .mc-footer {
-  background-color: #C5CAE9;
-}
-.material-card.Indigo.mc-active .mc-btn-action {
-  border-color: #E8EAF6;
-}
-.material-card.Blue h2 {
-  background-color: #2196F3;
-}
-.material-card.Blue h2:after {
-  border-top-color: #2196F3;
-  border-right-color: #2196F3;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-.material-card.Blue h2:before {
-  border-top-color: transparent;
-  border-right-color: #0D47A1;
-  border-bottom-color: #0D47A1;
-  border-left-color: transparent;
+.personal--detail p.celeb--form span{
+
 }
 
+
+
+/*Media Query Start*/
+@media (min-width: 240px) and (max-width: 580px) {
+    #left--filters {
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding-top: 12px;
+        padding-bottom: 0;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        margin: 0 0 8px;
+        border-radius: 4px;
+    }
+    #left--filters .filters-wrap {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    #left--filters h3 {
+        display: none;
+    }
+    #right--card {
+        width: 100%;
+    }
+}

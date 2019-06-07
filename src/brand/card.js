@@ -3,15 +3,6 @@ import Profiles from '../profiles.json';
 import {NavLink} from 'react-router-dom';
 import $ from 'jquery'
 
-const cardDetail = [
-    {'name':'Stephen Kramer Glickman', 'type': 'Comedian - Actor - Podcaster', 'url': 'https://d31wcbk3iidrjq.cloudfront.net/avatar-s2FSIyKyi.jpg'},
-    {'name':'Stephen Kramer Glickman', 'type': 'Comedian - Actor - Podcaster', 'url': 'https://d31wcbk3iidrjq.cloudfront.net/avatar-s2FSIyKyi.jpg'},
-    {'name':'Stephen Kramer Glickman', 'type': 'Comedian - Actor - Podcaster', 'url': 'https://d31wcbk3iidrjq.cloudfront.net/avatar-s2FSIyKyi.jpg'},
-    {'name':'Stephen Kramer Glickman', 'type': 'Comedian - Actor - Podcaster', 'url': 'https://d31wcbk3iidrjq.cloudfront.net/avatar-s2FSIyKyi.jpg'},
-    {'name':'Stephen Kramer Glickman', 'type': 'Comedian - Actor - Podcaster', 'url': 'https://d31wcbk3iidrjq.cloudfront.net/avatar-s2FSIyKyi.jpg'}
-];
-
-
 class Card extends React.Component{
 
     safeReturn(object,index,defaultValue)
@@ -29,33 +20,7 @@ class Card extends React.Component{
     }
 
     componentDidMount(){
-        // $('.material-card > .mc-btn-action').click(function () {
-        //     let card = $(this).parent('.material-card');
-        //     let icon = $(this).children('i');
-        //     icon.addClass('fa-spin-fast');
-        //
-        //     if (card.hasClass('mc-active')) {
-        //         card.removeClass('mc-active');
-        //
-        //         window.setTimeout(function() {
-        //             icon
-        //                 .removeClass('fa-arrow-left')
-        //                 .removeClass('fa-spin-fast')
-        //                 .addClass('fa-bars');
-        //
-        //         }, 800);
-        //     } else {
-        //         card.addClass('mc-active');
-        //
-        //         window.setTimeout(function() {
-        //             icon
-        //                 .removeClass('fa-bars')
-        //                 .removeClass('fa-spin-fast')
-        //                 .addClass('fa-arrow-left');
-        //
-        //         }, 800);
-        //     }
-        // });
+
     }
 
     reachCountToObject(reach)
@@ -88,14 +53,14 @@ class Card extends React.Component{
     getCardDetail(){
         let cardXml = []
 
-        let userprofiles = Profiles.users;
+         let userprofiles = Profiles.users;
+       // let userprofiles = [];
 
         for(let i in userprofiles){
             let imageUrl = this.safeReturn(userprofiles[i],'imageUrl','');
             let name = this.safeReturn(userprofiles[i],'name','');
             let type = this.safeReturn(userprofiles[i],'profession','');
             let price = this.reachCountToObject(this.safeReturn(userprofiles[i],'price',0));
-            console.log(price['unit'],price['count']);
             price = price['count'] + price['unit'];
             if(imageUrl == '')
             {
