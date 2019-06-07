@@ -1,6 +1,6 @@
 import React from 'react';
 import Profiles from '../profiles.json';
-
+import {NavLink} from 'react-router-dom';
 import $ from 'jquery'
 
 const cardDetail = [
@@ -57,6 +57,34 @@ class Card extends React.Component{
         //     }
         // });
     }
+
+    reachCountToObject(reach)
+    {
+        var returnObject = {};
+        reach = parseInt(reach);
+        returnObject['count'] = reach;
+        returnObject['unit'] = '';
+        if(reach < 1000)
+        {
+            return returnObject;
+        }
+        else if (reach < 1000000)
+        {
+            returnObject['count'] = parseFloat(reach/1000).toFixed(0);
+            returnObject['unit'] = 'k';
+        }
+        else if (reach < 1000000000)
+        {
+            returnObject['count'] = parseFloat(reach/1000000).toFixed(0);
+            returnObject['unit'] = 'm';
+        }
+        else if (reach < 1000000000000)
+        {
+            returnObject['count'] = parseFloat(reach/1000000000).toFixed(0);
+            returnObject['unit'] = 'b';
+        }
+        return returnObject;
+    }
     getCardDetail(){
         let cardXml = []
 
@@ -66,12 +94,15 @@ class Card extends React.Component{
             let imageUrl = this.safeReturn(userprofiles[i],'imageUrl','');
             let name = this.safeReturn(userprofiles[i],'name','');
             let type = this.safeReturn(userprofiles[i],'profession','');
-            let price = this.safeReturn(userprofiles[i],'price','');
+            let price = this.reachCountToObject(this.safeReturn(userprofiles[i],'price',0));
+            console.log(price['unit'],price['count']);
+            price = price['count'] + price['unit'];
             if(imageUrl == '')
             {
                 continue;
             }
             cardXml.push(
+                <NavLink to={'/dashboard/'}>
                 <div>
                 <div className="card-wrap col-md-4 col-sm-6 col-xs-12" key={i}>
                     <article className="material-card Red">
@@ -98,6 +129,8 @@ class Card extends React.Component{
 
 
                 </div>
+                </NavLink>
+
 
             )
         }
