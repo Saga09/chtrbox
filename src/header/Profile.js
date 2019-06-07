@@ -106,10 +106,7 @@ class Header extends React.Component{
         price = price['count'] + price['unit'];
         return(
             <div className="celeb--detail-wrapper">
-                <div className="col-md-4 col-sm-4 col-xs-12 celeb-picture">
-                    <img src="https://d31wcbk3iidrjq.cloudfront.net/IpPYvx1-B-03C8FDD3-1ED2-46E5-8329-674790F34EAB.png"
-                         className="img-responsive"/>
-                    <div className="col-md-4 col-sm-4 col-xs-4 celeb-picture">
+                    <div className="col-md-4 col-sm-4 col-xs-12 celeb-picture">
                         <img src={imageUrl} className="img-responsive"/>
                     </div>
                     <div className="col-md-8 col-sm-8 col-xs-12 celeb-detail">
@@ -139,7 +136,6 @@ class Header extends React.Component{
 
                     </div>
                 </div>
-            </div>
         )
     }
 }
